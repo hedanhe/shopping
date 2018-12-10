@@ -1,0 +1,29 @@
+建库的时候
+CREATE DATABASE meituan
+CHARACTER SET 'utf8'
+COLLATE 'utf8_general_ci';
+建表的时候 
+
+
+
+CREATE TABLE nav_li(
+        cat_id int,
+        a_index int,
+        b_index int,
+    	title varchar(20) not null,
+    	flag int,
+    	PRIMARY KEY (cat_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into nav_li values(1,"美食","10","1");
+
+CREATE TABLE detail_content(
+        id int,
+        cat_id int,
+        a_index int,
+        b_index int,
+        c_index int,
+    	title varchar(20) not null,
+    	flag int default 0,
+    	PRIMARY KEY (id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
